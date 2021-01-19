@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "458321440891",
+    "project_id": "mit-prototype",
+    "storage_bucket": "mit-prototype.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458321440891:android:7d7f0717c197b014ceb2de",
+        "android_client_info": {
+          "package_name": "com.app.mit_prototype"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458321440891-t9klsg6u8ns51sd2el53ree3stp3o9n0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.mit_prototype",
+            "certificate_hash": "b26e0e7fcebcb2424516bd8d85a0ce1c6275d776"
+          }
+        },
+        {
+          "client_id": "458321440891-te8cqkcroc9unk4t0kc9n1m5u9lucl6q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVV7OQ6czgxfpf9UNnaDEd9J2h-6RQlxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458321440891-te8cqkcroc9unk4t0kc9n1m5u9lucl6q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
