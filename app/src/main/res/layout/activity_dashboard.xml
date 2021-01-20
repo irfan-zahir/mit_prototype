@@ -6,19 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".Dashboard">
 
-    <TextView
-        android:id="@+id/dummy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Dashboard View" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250px">
 
-    <Button
-        android:id="@+id/sign_out"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="COVID Safe App"
+            app:titleTextColor="@color/white"
+            android:background="@color/main_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/sign_out"
+            android:src="@drawable/mit_4"
+            android:layout_width="150px"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="15dp"
+            android:layout_height="150px"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:id="@+id/button_container"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/dummy"
-        android:layout_centerHorizontal="true"
-        android:text="Sign out" />
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/mit_1"
+            android:layout_margin="15dp"
+            android:id="@+id/function_qr"
+            android:text="QR Code scan"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:background="@color/main_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:src="@drawable/mit_2"
+            android:padding="15dp"
+            android:background="@color/main_color"
+            android:layout_margin="15dp"
+            android:layout_toRightOf="@+id/function_qr"
+            android:id="@+id/function_stt"
+            android:layout_centerVertical="true"
+            android:text="Speech to text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
