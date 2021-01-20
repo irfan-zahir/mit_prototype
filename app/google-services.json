@@ -22,6 +22,17 @@
           }
         },
         {
+<<<<<<< Updated upstream
+=======
+          "client_id": "458321440891-moub5v9ho430c5p311itebmvc95shpan.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.mit_prototype",
+            "certificate_hash": "676159438af910f7571926f3b8013a40c5ebd4b7"
+          }
+        },
+        {
+>>>>>>> Stashed changes
           "client_id": "458321440891-rp6fvsokh670k7o5vf5n8qo40im7dmak.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
