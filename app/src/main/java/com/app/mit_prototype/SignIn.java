@@ -2,6 +2,7 @@ package com.app.mit_prototype;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -42,6 +44,7 @@ public class SignIn extends AppCompatActivity {
         switchAuthScreen = findViewById(R.id.switch_register);
 
         firebaseFirestore = FirebaseFirestore.getInstance();
+        firebaseAuth = firebaseAuth.getInstance();
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +61,7 @@ public class SignIn extends AppCompatActivity {
                         if(task.isSuccessful()){
                             if(task.getResult().isEmpty()){
                                 //no account found
+                                Log.w("login", "no account found");
                             }else{
                                 List<DocumentSnapshot> documents = task.getResult().getDocuments();
                                 email = documents.get(0).get("email").toString().trim();
@@ -70,7 +74,14 @@ public class SignIn extends AppCompatActivity {
                                             intent = new Intent(SignIn.this, MainActivity.class);
                                             intent.putExtra("currentUser", currentUser);
                                             startActivity(intent);
+                                            Log.w("login", "success login");
                                         }
+                                    }
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Log.w("login", "failed login");
                                     }
                                 });
                             }

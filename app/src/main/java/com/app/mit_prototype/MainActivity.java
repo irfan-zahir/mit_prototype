@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -25,10 +26,12 @@ public class MainActivity extends AppCompatActivity {
 
         int timeout = 1000;
 
-
+        Log.d("main activity", "onCreate: main activity created");
 
         firebaseAuth = FirebaseAuth.getInstance();
-        currentUser = firebaseAuth.getCurrentUser();
+        if(firebaseAuth.getCurrentUser()!=null){
+            currentUser = firebaseAuth.getCurrentUser();
+        }
 
         if(currentUser == null){
             intent = new Intent( MainActivity.this, SignIn.class );
