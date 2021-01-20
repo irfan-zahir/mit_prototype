@@ -73,6 +73,8 @@ public class SignUp extends AppCompatActivity {
                 cPassword = cPasswordInput.getText().toString().trim();
                 username = usernameInput.getText().toString().trim();
 
+                registerButton.setEnabled(false);
+
                 if(validateEmail(email) && validatePhone(phone) && validatePassword(password, cPassword)
                         && !username.isEmpty()){
 

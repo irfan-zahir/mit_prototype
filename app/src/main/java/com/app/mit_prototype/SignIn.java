@@ -52,6 +52,8 @@ public class SignIn extends AppCompatActivity {
                 String password = passwordInput.getText().toString().trim();
                 String username = usernameInput.getText().toString().trim();
 
+                signInButton.setEnabled(false);
+
                 firebaseFirestore.collection("users")
                         .whereEqualTo("username", username).limit(1).get()
                         .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
