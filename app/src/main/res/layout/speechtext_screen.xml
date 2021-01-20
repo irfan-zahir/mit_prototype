@@ -9,6 +9,7 @@
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +48,11 @@
         android:layout_width="137dp"
         android:layout_height="118dp"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:backgroud="@drawable/mit_2"
+        android:layout_marginTop="304dp"
+        android:background="@drawable/mit_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
