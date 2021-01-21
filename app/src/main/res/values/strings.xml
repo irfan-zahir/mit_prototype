@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">mit_prototype</string>
+    <string name="app_name">COVID Safe App</string>
     <string name="landing_text">COVID Safe App</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
