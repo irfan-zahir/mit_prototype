@@ -5,16 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Dashboard extends AppCompatActivity {
 
-    private ImageView signOutButton, qrButton, speechButton;
+    ImageView signOutButton, qrButton, speechButton;
     private FirebaseAuth firebaseAuth;
-    private Intent intent;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
